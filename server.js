@@ -55,5 +55,5 @@ app.put('/liked', (req, res) => {
 })
 
 app.listen(process.env.PORT || 3001, () => {
-    console.log('server is running on port `${process.env.PORT}`');
+    console.log(`server is running on port ${process.env.PORT}`);
 })
