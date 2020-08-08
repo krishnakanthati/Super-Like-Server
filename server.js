@@ -30,8 +30,8 @@ app.get('/', (req, res) => {
 app.post('/like', (req, res) => {
   const { likes } = req.body;
   db('likescount')
-  .insert({likes: likes})
-  // .increment('likes', 0)
+  // .insert({likes: likes})
+  .increment('likes', 0)
   .returning('likes')
   .then(likes => {
     res.json(likes[0])
